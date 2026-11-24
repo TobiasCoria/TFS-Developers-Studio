@@ -9886,6 +9886,35 @@ html.gsap-scroll-ready .reveal.is-visible {
   font: 11px/1.7 var(--font-body);
 }
 
+.group-signature {
+  display: inline-block;
+  margin-top: 8px;
+  color: #e0c28f;
+  font-weight: 600;
+}
+
+.footer-affiliation {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #bdb3c8;
+}
+
+.footer-affiliation::before {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--violet-hot);
+  box-shadow: 0 0 10px #be8cf3a0;
+  content: '';
+}
+
+.footer-affiliation b {
+  color: #e7cd9e;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+
 @media (max-width: 760px) {
   .team-card>.team-summary {
     min-height: 0;
