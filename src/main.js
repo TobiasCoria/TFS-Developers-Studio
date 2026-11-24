@@ -179,29 +179,37 @@ const sectionObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('main section[id]').forEach((section) => sectionObserver.observe(section));
 
 const projectCases = {
-  tcgym: {
-    name: 'TCGym',
-    category: 'SISTEMA DE GESTIÓN PARA GIMNASIO',
+  shifts: {
+    name: 'SHIFTS',
+    category: 'PLATAFORMA DE TURNOS / PRODUCTO WEB',
     status: 'CASO DOCUMENTADO',
-    summary: 'Sistema web para centralizar el funcionamiento diario de un gimnasio. Reúne la administración de socios, la reserva de turnos, el check-in y métricas operativas en un mismo panel.',
-    image: '/media/tcgym-login.png',
-    imageAlt: 'Pantalla de acceso de TCGym con ingreso por email o documento',
-    projectUrl: 'https://tcgym.vercel.app/',
-    codeUrl: 'https://github.com/TobiasCoria/tcgym',
-    contribution: 'Desarrollo integral de la interfaz, el backend y la base de datos, conectando la experiencia de los socios con las tareas administrativas del gimnasio.',
-    scope: ['Socios y administración', 'Reservas y check-in', 'Agenda y métricas'],
-    technologies: ['React', 'Node.js', 'Express', 'MySQL'],
+    summary: 'Plataforma de turnos pensada para distintos tipos de negocios. Separa la gestión del local de la experiencia de reserva del cliente.',
+    image: '/media/shifts-poster.jpg',
+    imageAlt: 'Vista de acceso y gestión de SHIFTS, plataforma de turnos para negocios',
+    gallery: [
+      { src: '/media/shifts-01.jpg', alt: 'Pantallas de acceso y creación de cuenta en SHIFTS', caption: 'Dos recorridos: gestionar un negocio o reservar como cliente.' },
+      { src: '/media/shifts-02.jpg', alt: 'Formulario de configuración del negocio en SHIFTS', caption: 'Configuración del negocio y sus datos operativos.' },
+      { src: '/media/shifts-03.jpg', alt: 'Pantalla de reservas de SHIFTS', caption: 'La experiencia de turnos conecta disponibilidad y reservas.' },
+    ],
+    contribution: 'La propuesta contempla opciones para configurar el rubro, los servicios, los horarios, los profesionales y las sucursales, adaptando la agenda a distintos tipos de negocio.',
+    scope: ['Administración del local', 'Reserva para clientes', 'Rubros, servicios y horarios', 'Profesionales y sucursales'],
+    technologies: [],
     tone: 'violet',
-    detailTitle: 'Del uso diario a la administración',
+    detailTitle: 'Una agenda para cada negocio',
   },
   pediatria: {
     name: 'Portal Pediatría',
     category: 'PORTAL WEB / SISTEMA DE GESTIÓN',
     status: 'CASO DOCUMENTADO',
     summary: 'Portal de trabajo para un consultorio pediátrico. Organiza pacientes, historias clínicas y agenda, con accesos diferenciados para doctora y secretaría.',
-    image: '/media/pediatric-dashboard.png',
-    imageAlt: 'Panel del portal de gestión para consultorio pediátrico',
+    image: '/media/pediatria-poster.jpg',
+    imageAlt: 'Vista del panel principal del portal de gestión pediátrica',
     projectUrl: 'https://portal-de-historia-cl-nica-pedi-tri.vercel.app/login',
+    gallery: [
+      { src: '/media/pediatria-01.jpg', alt: 'Panel principal del portal pediátrico y resumen del consultorio', caption: 'Un panel principal para organizar la jornada.' },
+      { src: '/media/pediatria-02.jpg', alt: 'Ficha de paciente y registro de encuentros del portal pediátrico', caption: 'Información del paciente e historial de encuentros.' },
+      { src: '/media/pediatria-03.jpg', alt: 'Agenda y gestión de turnos del portal pediátrico', caption: 'Agenda y seguimiento de turnos del consultorio.' },
+    ],
     contribution: 'Desarrollo integral del frontend, backend y base de datos. Incluye consulta de pacientes, alta guiada de fichas y gestión de turnos.',
     scope: ['Pacientes e historias clínicas', 'Agenda y turnos', 'Accesos por perfil'],
     technologies: [],
@@ -242,8 +250,13 @@ const projectCases = {
     category: 'COMERCIO LOCAL / PLATAFORMA DE PEDIDOS',
     status: 'PRODUCTO LOCAL',
     summary: 'Plataforma de pedidos de cercanía para Wheelwright y localidades donde las grandes aplicaciones de delivery no llegan. Conecta a vecinos con los comercios de su zona bajo una idea simple: comprar cerca y elegir local.',
-    image: '/media/wheelahorra-login.png',
-    imageAlt: 'Pantalla de acceso de Wheelahorra para comprar o gestionar un comercio local',
+    image: '/media/wheelahorra-poster.jpg',
+    imageAlt: 'Vista de la tienda digital de Wheelahorra con productos de comercios locales',
+    gallery: [
+      { src: '/media/wheelahorra-01.jpg', alt: 'Tienda digital de Wheelahorra con productos de comercios locales', caption: 'Explorar la oferta de los comercios de Wheelwright.' },
+      { src: '/media/wheelahorra-02.jpg', alt: 'Confirmación de compra en Wheelahorra', caption: 'Un flujo de compra pensado para el contexto local.' },
+      { src: '/media/wheelahorra-03.jpg', alt: 'Opciones de retiro y entrega para pedidos en Wheelahorra', caption: 'Alternativas de retiro y entrega para los pedidos.' },
+    ],
     contribution: 'La experiencia reúne el acceso de clientes y comercios en un mismo canal digital. El proyecto utiliza Odoo y pone el foco en dar visibilidad a la oferta local y acercarla a quienes viven en la zona.',
     scope: ['Comercios de cercanía', 'Pedidos dentro de la localidad', 'Acceso para clientes y comercios'],
     technologies: ['Odoo'],
@@ -283,6 +296,30 @@ function makeCasePanel(project, index) {
     image.decoding = 'async';
     visual.append(image);
     visual.append(detailText('span', 'project-visual-index', 'TFS / PORTFOLIO'));
+  } else if (project.gallery?.length) {
+    visual = document.createElement('div');
+    visual.className = 'project-chapter-visual project-gallery';
+    visual.setAttribute('aria-label', `Capturas del recorrido de ${project.name}`);
+    const galleryTrack = document.createElement('div');
+    galleryTrack.className = 'project-gallery-track';
+    galleryTrack.tabIndex = 0;
+    galleryTrack.setAttribute('aria-label', 'Capturas del proyecto. Desplázate horizontalmente para ver más.');
+    project.gallery.forEach((frame, frameIndex) => {
+      const figure = document.createElement('figure');
+      figure.className = 'project-gallery-frame';
+      const image = document.createElement('img');
+      image.src = frame.src;
+      image.alt = frame.alt;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      figure.append(image, detailText('figcaption', '', frame.caption));
+      galleryTrack.append(figure);
+    });
+    visual.append(galleryTrack);
+    const galleryHint = detailText('span', 'project-gallery-hint', 'DESLIZÁ PARA EXPLORAR');
+    galleryHint.setAttribute('aria-hidden', 'true');
+    visual.append(galleryHint);
+    visual.append(detailText('span', 'project-visual-index', `TFS / ${String(project.gallery.length).padStart(2, '0')} VISTAS`));
   }
 
   const copy = document.createElement('div');
@@ -348,8 +385,9 @@ function makeCasePanel(project, index) {
     }
     if (actions.childElementCount) copy.append(actions);
   }
-  if (visual) panel.append(visual);
+  if (visual && index === 0) panel.append(visual);
   panel.append(copy);
+  if (visual && index > 0) panel.append(visual);
   return panel;
 }
 
@@ -363,6 +401,15 @@ function makeProjectCase(project) {
     const targetLeft = projectTrack.scrollLeft + panels[1].getBoundingClientRect().left - projectTrack.getBoundingClientRect().left;
     animateProjectTrackTo(targetLeft);
   });
+  if (panels[1].querySelector('.project-gallery-track')) {
+    const gallery = panels[1].querySelector('.project-gallery-track');
+    gallery.addEventListener('wheel', (event) => {
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      gallery.scrollBy({ left: event.deltaY, behavior: reducedMotionQuery.matches ? 'auto' : 'smooth' });
+    }, { passive: false });
+  }
   return article;
 }
 
@@ -424,6 +471,7 @@ function animateProjectTrackTo(targetLeft) {
 function openProject(projectId, opener) {
   const project = projectCases[projectId];
   if (!project) return;
+  pauseProjectPreviews();
   projectDialogTitle.textContent = project.name;
   projectDialogOpener = opener;
   projectReturnScrollY = window.scrollY;
@@ -452,6 +500,20 @@ function closeProject() {
   }, reducedMotionQuery.matches ? 0 : 430);
 }
 
+function pauseProjectPreviews() {
+  document.querySelectorAll('[data-project-preview]').forEach((video) => video.pause());
+}
+
+function resumeProjectPreviews() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('[data-project-preview]').forEach((video) => {
+    const bounds = video.getBoundingClientRect();
+    if (bounds.bottom > 0 && bounds.top < innerHeight && bounds.right > 0 && bounds.left < innerWidth) {
+      video.play().catch(() => {});
+    }
+  });
+}
+
 document.querySelectorAll('[data-open-project]').forEach((trigger) => {
   trigger.addEventListener('click', (event) => {
     if (trigger instanceof HTMLAnchorElement) event.preventDefault();
@@ -465,6 +527,7 @@ projectDialog.addEventListener('close', () => {
   projectDialog.classList.remove('is-closing', 'is-visible');
   projectDialogOpener?.focus({ preventScroll: true });
   window.scrollTo(window.scrollX, projectReturnScrollY);
+  resumeProjectPreviews();
 });
 projectTrack.addEventListener('scroll', updateProjectProgress, { passive: true });
 projectTrack.addEventListener('wheel', (event) => {
@@ -546,9 +609,37 @@ sheenCards.forEach((card) => {
   }, { passive: true });
 });
 
+const projectPreviewVideos = [...document.querySelectorAll('[data-project-preview]')];
+const reducedMotionQuery = matchMedia('(prefers-reduced-motion: reduce)');
+const stopProjectPreview = (video) => {
+  video.pause();
+  try { video.currentTime = 0; } catch {}
+};
+if ('IntersectionObserver' in window && !reducedMotionQuery.matches) {
+  const previewObserver = new IntersectionObserver((entries) => {
+    entries.forEach(({ isIntersecting, target }) => {
+      const video = target;
+      if (isIntersecting) {
+        if (projectDialog.open) {
+          stopProjectPreview(video);
+          return;
+        }
+        video.querySelectorAll('source[data-src]').forEach((source) => {
+          source.src = source.dataset.src;
+          source.removeAttribute('data-src');
+        });
+        if (video.readyState === 0) video.load();
+        video.play().catch(() => {});
+      } else stopProjectPreview(video);
+    });
+  }, { threshold: 0.35, rootMargin: '100px' });
+  projectPreviewVideos.forEach((video) => previewObserver.observe(video));
+} else {
+  projectPreviewVideos.forEach(stopProjectPreview);
+}
+
 let disposeMotion;
 let motionRequested = false;
-const reducedMotionQuery = matchMedia('(prefers-reduced-motion: reduce)');
 const desktopMotionQuery = matchMedia('(min-width: 900px) and (pointer: fine)');
 const requestMotion = () => {
   if (motionRequested || reducedMotionQuery.matches || !desktopMotionQuery.matches || navigator.connection?.saveData) return;

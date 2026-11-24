@@ -17,15 +17,15 @@ La vista local se sirve en `http://127.0.0.1:8780/`.
 
 En escritorio, GSAP + ScrollTrigger controlan la cámara del inicio y la profundidad de los casos; Lenis suaviza el desplazamiento. En pantallas pequeñas no se fija el hero y el scroll se mantiene nativo. Si el sistema pide movimiento reducido, la secuencia se desactiva. Las fuentes Barlow Condensed, Space Grotesk e IBM Plex Mono están guardadas localmente con sus licencias OFL.
 
-## Casos migrados
+## Casos y material audiovisual
 
-- TCGym, con React, Node.js, Express y MySQL documentados en su caso local.
-- Portal Pediatría, con captura pública del portal y descripción disponible.
+- SHIFTS, plataforma de turnos adaptable a distintos negocios, con gestión del local y reservas para clientes.
+- Portal Pediatría, con gestión de pacientes, historias clínicas y agenda.
 - Facility Management, mostrando únicamente la pantalla pública.
 - Izipark, identificado como proyecto en desarrollo y con detalles pendientes de confirmar.
 - Wheelahorra, plataforma de pedidos de cercanía sobre Odoo para Wheelwright y localidades fuera de cobertura de las grandes apps.
 
-Los recursos gráficos de estos casos se copiaron del portfolio original y de las capturas compartidas para Wheelahorra. Los perfiles enlazan a los portfolios personales confirmados de Tobías y Santino; no se atribuyen cargos ni tecnologías no confirmados.
+Los recorridos de SHIFTS, Portal Pediatría y Wheelahorra se publican como videos cortos de vista previa y secciones de cada caso; las capturas de sus fichas se extrajeron de los videos originales compartidos por el equipo. Las vistas previas cargan al acercarse a la pantalla y respetan la preferencia de movimiento reducido. Los perfiles enlazan a los portfolios personales confirmados de Tobías y Santino; no se atribuyen cargos ni tecnologías no confirmados.
 
 ## Recursos tipográficos
 

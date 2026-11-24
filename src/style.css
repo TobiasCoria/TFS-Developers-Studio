@@ -3678,6 +3678,14 @@ img {
   background: #f3f2ee;
 }
 
+.showcase-browser>.project-preview-video {
+  display: block;
+  width: 100%;
+  height: calc(100% - 21px);
+  object-fit: contain;
+  background: #f3f2ee;
+}
+
 .showcase-launch {
   position: absolute;
   right: 13px;
@@ -8681,6 +8689,94 @@ main section[id] {
   background: linear-gradient(135deg,#19132188,#1e152280 55%,#15101b88);
 }
 
+.project-chapter-scope:has(.project-gallery) {
+  grid-template-columns: minmax(300px,.84fr) minmax(0,1.16fr);
+}
+
+.project-gallery {
+  min-height: 0;
+  height: min(66vh,620px);
+  aspect-ratio: auto;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.project-gallery-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #b892de70 #ffffff12;
+  scroll-snap-type: x mandatory;
+}
+
+.project-gallery-track:focus-visible {
+  outline: 1px solid #d4b2ef;
+  outline-offset: -2px;
+}
+
+.project-gallery-frame {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: minmax(0,1fr) auto;
+  align-items: center;
+  overflow: hidden;
+  scroll-snap-align: center;
+  background: #eceae5;
+}
+
+.project-gallery-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  background: #eceae5;
+}
+
+.project-gallery-frame figcaption {
+  min-height: 42px;
+  padding: 11px 14px;
+  background: #14111bcf;
+  color: #e5dcec;
+  font: 10px/1.5 var(--font-body);
+}
+
+.project-gallery-hint {
+  position: absolute;
+  z-index: 3;
+  top: 25px;
+  left: 26px;
+  padding: 6px 8px;
+  background: #100e16c9;
+  color: #d6c7e4;
+  font: 8px var(--font-mono);
+  letter-spacing: .12em;
+  pointer-events: none;
+}
+
+.project-chapter-scope:has(.project-gallery) .project-chapter-copy {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+}
+
+.project-chapter-scope:has(.project-gallery) .project-gallery {
+  grid-column: 2;
+  grid-row: 1;
+}
+
 .project-chapter::before {
   inset: 10% 2% 10%;
   background: radial-gradient(ellipse at 15% 45%,#8d5aaa18,transparent 47%);
@@ -9152,6 +9248,34 @@ body.intro-active {
 
   .project-chapter-visual {
     height: clamp(210px,34svh,320px);
+  }
+
+  .project-chapter-scope:has(.project-gallery) {
+    grid-template-columns: minmax(0,1fr);
+    align-content: start;
+    gap: 24px;
+  }
+
+  .project-chapter-scope:has(.project-gallery) .project-chapter-copy,
+  .project-chapter-scope:has(.project-gallery) .project-gallery {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .project-chapter-scope:has(.project-gallery) .project-gallery {
+    height: min(43svh,340px);
+    min-height: 220px;
+    padding: 10px;
+  }
+
+  .project-gallery-frame figcaption {
+    min-height: 38px;
+    padding: 9px 10px;
+  }
+
+  .project-gallery-hint {
+    top: 17px;
+    left: 18px;
   }
 }
 
@@ -9708,5 +9832,63 @@ html.gsap-scroll-ready .reveal.is-visible {
   .showcase-card[data-project="wheelahorra"] {
     grid-column: auto;
     width: 100%;
+  }
+}
+
+/* Keep the project walkthrough gallery compact and easy to scan. */
+.project-chapter-scope:has(.project-gallery) {
+  gap: clamp(16px,2vw,28px);
+  padding-block: clamp(16px,2.3vh,24px);
+}
+
+.project-chapter-scope .project-gallery {
+  height: min(43vh,400px);
+  min-height: 240px;
+  aspect-ratio: auto;
+  padding: 12px;
+}
+
+@media (min-width: 761px) and (max-height: 760px) {
+  .project-chapter-scope .project-gallery {
+    height: min(33vh,260px);
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 760px) {
+  .project-chapter-scope:has(.project-gallery) {
+    grid-template-columns: minmax(0,1fr);
+    align-content: start;
+    gap: 20px;
+    padding: 24px 20px 34px;
+  }
+
+  .project-chapter-scope:has(.project-gallery) .project-chapter-copy,
+  .project-chapter-scope:has(.project-gallery) .project-gallery {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .project-chapter-scope .project-gallery {
+    width: 100%;
+    height: min(42svh,320px);
+    min-height: 210px;
+    padding: 9px;
+  }
+}
+
+.team-card>.team-summary {
+  display: block;
+  min-height: 58px;
+  margin: 0;
+  padding: 11px 0 0;
+  color: #b9b1c1;
+  font: 11px/1.7 var(--font-body);
+}
+
+@media (max-width: 760px) {
+  .team-card>.team-summary {
+    min-height: 0;
+    padding-top: 8px;
   }
 }
