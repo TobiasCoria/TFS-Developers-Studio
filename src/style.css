@@ -1879,7 +1879,7 @@ img {
 
 .reveal-ready .reveal:not(.is-visible) {
   opacity: 0;
-  transform: translateY(18px);
+  transform: translate3d(0,34px,0) scale(.985);
 }
 
 .reveal.is-visible {
@@ -9643,4 +9643,11 @@ body.intro-active {
     height: min(132vw,620px);
     transform: translate(-50%,-50%);
   }
+}
+
+html.gsap-scroll-ready .reveal:not(.is-visible),
+html.gsap-scroll-ready .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }

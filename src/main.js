@@ -138,7 +138,7 @@ if ('IntersectionObserver' in window) {
         revealObserver.unobserve(target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -12% 0px' });
   revealTargets.forEach((element) => revealObserver.observe(element));
   document.documentElement.classList.add('reveal-ready');
 } else {
@@ -146,10 +146,10 @@ if ('IntersectionObserver' in window) {
 }
 let revealFallbackFrame = 0;
 const revealApproachingContent = () => {
-  if (revealFallbackFrame) return;
+  if (revealObserver || revealFallbackFrame) return;
   revealFallbackFrame = requestAnimationFrame(() => {
     revealFallbackFrame = 0;
-    const revealLine = innerHeight * 1.08;
+    const revealLine = innerHeight * 0.92;
     revealTargets.forEach((element) => {
       if (!element.classList.contains('is-visible') && element.getBoundingClientRect().top <= revealLine) {
         element.classList.add('is-visible');
@@ -542,7 +542,10 @@ const requestMotion = () => {
   motionRequested = true;
   const load = () => import('./motion.js')
     .then(({ mountMotion }) => { disposeMotion = mountMotion(); })
-    .catch(() => { motionRequested = false; });
+    .catch(() => {
+      motionRequested = false;
+      document.documentElement.classList.remove('gsap-scroll-ready');
+    });
   if ('requestIdleCallback' in window) window.requestIdleCallback(load, { timeout: 1200 });
   else window.setTimeout(load, 80);
 };

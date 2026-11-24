@@ -91,6 +91,48 @@ export function mountMotion() {
         { y: 0, opacity: 1, ease: 'none', scrollTrigger: { trigger: portrait, start: 'top 94%', end: 'center 55%', scrub: 0.7 } });
     });
 
+    // Each text block and card unlocks as it enters the reading area.
+    const staggeredRevealGroups = [
+      '.service-list .service-item',
+      '.project-showcase-grid .showcase-card',
+      '.team-grid .team-card',
+      '.method-steps article',
+      '.faq-list .faq-item',
+      '.contact-layout > *',
+    ];
+    const revealDelays = new Map();
+    staggeredRevealGroups.forEach((selector) => {
+      document.querySelectorAll(selector).forEach((element, index) => {
+        revealDelays.set(element, Math.min(index * 0.07, 0.28));
+      });
+    });
+
+    document.querySelectorAll('.reveal').forEach((element) => {
+      gsap.fromTo(element,
+        { y: 36, scale: 0.985, opacity: 0, transformOrigin: '50% 85%' },
+        {
+          y: 0,
+          scale: 1,
+          opacity: 1,
+          duration: 0.88,
+          delay: revealDelays.get(element) ?? 0,
+          ease: 'power3.out',
+          clearProps: 'transform,opacity',
+          scrollTrigger: { trigger: element, start: 'top 88%', once: true },
+        },
+      );
+    });
+
+    const methodSteps = document.querySelector('.method-steps');
+    const methodLine = document.querySelector('.method-line span');
+    if (methodSteps && methodLine) {
+      gsap.fromTo(methodLine, { scaleX: 0 }, {
+        scaleX: 1,
+        ease: 'none',
+        scrollTrigger: { trigger: methodSteps, start: 'top 82%', end: 'top 36%', scrub: 0.75 },
+      });
+    }
+
     if (cinematic) {
       const grid = document.querySelector('.hero-grid');
       if (grid) {
@@ -105,6 +147,7 @@ export function mountMotion() {
       }
     }
 
+    document.documentElement.classList.add('gsap-scroll-ready');
     ScrollTrigger.refresh();
   });
 
@@ -114,6 +157,7 @@ export function mountMotion() {
     document.removeEventListener('click', onAnchor);
     document.removeEventListener('visibilitychange', onVisibility);
     window.removeEventListener('scroll', updateHeader);
+    document.documentElement.classList.remove('gsap-scroll-ready');
     document.documentElement.style.removeProperty('--page-progress');
   };
 }
