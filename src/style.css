@@ -3704,10 +3704,12 @@ img {
 }
 
 .brand-word small {
-  margin-top: 3px;
-  color: #bca8d1;
-  font: 7px/1 var(--font-mono);
-  letter-spacing: .24em;
+  display: block;
+  margin-top: 5px;
+  color: #e2c58e;
+  font: 600 8px/1 var(--font-mono);
+  letter-spacing: .28em;
+  text-shadow: 0 0 10px #d1aa6933;
 }
 
 .showcase-launch {
