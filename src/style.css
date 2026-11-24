@@ -9651,3 +9651,62 @@ html.gsap-scroll-ready .reveal.is-visible {
   transform: none;
   transition: none;
 }
+
+.team-profile-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.team-profile-link .team-portrait {
+  transition: border-color .35s var(--ease),box-shadow .35s var(--ease);
+}
+
+.team-profile-link:hover .team-portrait,
+.team-profile-link:focus-visible .team-portrait {
+  border-color: #d3b2ff9c;
+  box-shadow: 0 16px 45px #0005,0 0 24px #a984de24;
+}
+
+.team-profile-link .team-card-meta>span {
+  color: var(--gold-light);
+  transition: color .3s var(--ease);
+}
+
+.team-profile-link:hover .team-card-meta>span,
+.team-profile-link:focus-visible .team-card-meta>span {
+  color: #f3d9a3;
+}
+
+.team-profile-link:focus-visible {
+  outline: 2px solid var(--violet-hot);
+  outline-offset: 6px;
+}
+
+.showcase-card[data-project="wheelahorra"] {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%,620px);
+  background: radial-gradient(ellipse at 88% 7%,#f1c6531c,transparent 36%),linear-gradient(148deg,#1d2825,#17141e 56%,#162923);
+  border-color: #d4b75b50;
+}
+
+.showcase-card[data-project="wheelahorra"]:hover {
+  border-color: #e4c46d99;
+  box-shadow: 0 27px 75px #0007,0 0 34px #d9b9591e;
+}
+
+.showcase-card[data-project="wheelahorra"] .showcase-media {
+  background: radial-gradient(ellipse at 50% 50%,#d7b45720,transparent 65%),linear-gradient(145deg,#101812,#1c2823 58%,#111a16);
+}
+
+.showcase-card[data-project="wheelahorra"] .showcase-title-mark {
+  color: #e9ce7b;
+}
+
+@media (max-width: 760px) {
+  .showcase-card[data-project="wheelahorra"] {
+    grid-column: auto;
+    width: 100%;
+  }
+}

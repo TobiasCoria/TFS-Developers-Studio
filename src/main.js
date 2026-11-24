@@ -237,6 +237,19 @@ const projectCases = {
     status: 'EN DESARROLLO',
     detailTitle: 'Encontrar una cochera, más simple',
   },
+  wheelahorra: {
+    name: 'Wheelahorra',
+    category: 'COMERCIO LOCAL / PLATAFORMA DE PEDIDOS',
+    status: 'PRODUCTO LOCAL',
+    summary: 'Plataforma de pedidos de cercanía para Wheelwright y localidades donde las grandes aplicaciones de delivery no llegan. Conecta a vecinos con los comercios de su zona bajo una idea simple: comprar cerca y elegir local.',
+    image: '/media/wheelahorra-login.png',
+    imageAlt: 'Pantalla de acceso de Wheelahorra para comprar o gestionar un comercio local',
+    contribution: 'La experiencia reúne el acceso de clientes y comercios en un mismo canal digital. El proyecto utiliza Odoo y pone el foco en dar visibilidad a la oferta local y acercarla a quienes viven en la zona.',
+    scope: ['Comercios de cercanía', 'Pedidos dentro de la localidad', 'Acceso para clientes y comercios'],
+    technologies: ['Odoo'],
+    tone: 'green',
+    detailTitle: 'El comercio local, más cerca',
+  },
 };
 
 const projectDialog = document.querySelector('#project-detail-dialog');

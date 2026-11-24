@@ -23,8 +23,9 @@ En escritorio, GSAP + ScrollTrigger controlan la cámara del inicio y la profund
 - Portal Pediatría, con captura pública del portal y descripción disponible.
 - Facility Management, mostrando únicamente la pantalla pública.
 - Izipark, identificado como proyecto en desarrollo y con detalles pendientes de confirmar.
+- Wheelahorra, plataforma de pedidos de cercanía sobre Odoo para Wheelwright y localidades fuera de cobertura de las grandes apps.
 
-Los recursos gráficos de estos casos se copiaron del portfolio original. Los perfiles de Felipe y Santino no contienen cargos, tecnologías ni proyectos atribuidos.
+Los recursos gráficos de estos casos se copiaron del portfolio original y de las capturas compartidas para Wheelahorra. Los perfiles enlazan a los portfolios personales confirmados de Tobías y Santino; no se atribuyen cargos ni tecnologías no confirmados.
 
 ## Recursos tipográficos
 
@@ -32,7 +33,7 @@ Barlow Condensed, Space Grotesk e IBM Plex Mono se sirven localmente para evitar
 
 ## Límites conocidos
 
-- Los perfiles individuales requieren bios, especialidades, fotos y casos confirmados.
+- El perfil de Felipe requiere una URL personal y datos confirmados antes de agregar nuevos detalles.
 - Los casos de Pediatría e Izipark requieren confirmar tecnologías antes de publicarlas.
 - El formulario prepara una consulta en el cliente de correo; no almacena ni envía datos en un servidor.
 - El email de contacto está centralizado en `src/content.js` y puede cambiarse antes de publicar.
