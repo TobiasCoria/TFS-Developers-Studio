@@ -3681,9 +3681,33 @@ img {
 .showcase-browser>.project-preview-video {
   display: block;
   width: 100%;
-  height: calc(100% - 21px);
+  height: auto;
+  min-height: 0;
+  flex: 1 1 auto;
   object-fit: contain;
   background: #f3f2ee;
+}
+
+.showcase-browser:has(.project-preview-video) {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.showcase-browser:has(.project-preview-video) .showcase-browser-bar {
+  flex: 0 0 21px;
+}
+
+.showcase-media-link,
+.showcase-browser {
+  min-height: 0;
+}
+
+.brand-word small {
+  margin-top: 3px;
+  color: #bca8d1;
+  font: 7px/1 var(--font-mono);
+  letter-spacing: .24em;
 }
 
 .showcase-launch {

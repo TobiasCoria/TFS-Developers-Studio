@@ -1,7 +1,7 @@
 import { services, brand } from './content.js';
 import './particles.js';
 
-document.querySelectorAll('.brand-word,.footer-word').forEach((node) => { node.textContent = brand.descriptor; });
+document.querySelectorAll('.footer-word').forEach((node) => { node.textContent = brand.descriptor; });
 document.querySelector('.preloader-bottom>span').textContent = `ESTUDIO DIGITAL · ${brand.location.toUpperCase()}`;
 document.querySelector('.mobile-nav>p').firstChild.textContent = brand.name.toUpperCase() + ' ';
 document.querySelector('.index-dialog-brand b').firstChild.textContent = brand.name.toUpperCase() + ' ';
