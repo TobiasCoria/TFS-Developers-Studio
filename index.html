@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#100d19" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="TFS Developers Studio — Estudio de desarrollo de software, productos web, ERP y plataformas empresariales." />
+    <meta property="og:title" content="TFS Developers Studio" />
+    <meta property="og:description" content="Ideas complejas. Tecnología en movimiento." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TFS Developers Studio" />
+    <meta name="twitter:description" content="Ideas complejas. Tecnología en movimiento." />
+    <title>TFS Developers Studio</title>
+    <link rel="icon" href="/favicon.svg?v=tfs-purple" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preload" href="/fonts/barlow-condensed.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/plex-mono.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/brand/tfs-mark.svg" as="image" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <div class="preloader intro-playing">
+      <div class="intro-world" aria-hidden="true">
+        <div class="intro-world-grid"></div><div class="intro-world-floor"></div><div class="intro-world-frame"></div><div class="intro-world-scan"></div>
+        <article class="intro-panel intro-panel-left"><span>01 / CONCEPTO</span><b>IDEA</b><i></i><small>PROBLEMA · DIRECCIÓN</small></article>
+        <article class="intro-panel intro-panel-right"><span>02 / INGENIERÍA</span><b>PRODUCTO</b><i></i><small>SOFTWARE · SISTEMAS</small></article>
+        <p class="intro-trajectory"><span>IDEA</span><i>→</i><span>SISTEMA</span><i>→</i><span>PRODUCTO</span></p>
+        <span class="intro-coordinate intro-coordinate-left">TFS / DIGITAL STUDIO</span><span class="intro-coordinate intro-coordinate-right">ROSARIO — WORLDWIDE</span>
+      </div>
+      <div class="preloader-mark"><img src="/brand/tfs-mark.svg" alt="TFS"><span class="preloader-sweep" aria-hidden="true"></span></div>
+      <p class="preloader-name"><span>SOFTWARE</span><i>·</i><span>SISTEMAS</span><i>·</i><span>PRODUCTO</span></p>
+      <div class="preloader-bottom"><span>ESTUDIO DIGITAL <i>·</i> ROSARIO, ARGENTINA</span><span class="load-count">00</span></div>
+      <div class="preloader-track"><i></i></div>
+      <button type="button" class="skip-intro">Saltar intro <span>↗</span></button>
+    </div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="ambient ambient-violet" aria-hidden="true"></div>
+    <div class="ambient ambient-green" aria-hidden="true"></div>
+    <canvas class="ambient-particles" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="TFS Developers Studio, inicio"><span class="brand-mark-motion" aria-hidden="true"><img class="brand-logo" src="/brand/tfs-mark.svg" alt=""></span><span class="brand-word">Developers Studio</span></a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#estudio"><span>01</span>Estudio</a><a href="#servicios"><span>02</span>Servicios</a><a href="#proyectos"><span>03</span>Proyectos</a><a href="#equipo"><span>04</span>Equipo</a>
+      </nav>
+      <button class="index-open" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="studio-index"><span class="index-open-mark" aria-hidden="true"><i></i><i></i><i></i></span><span><small>MAPA DEL ESTUDIO</small><b>07 <i>DESTINOS</i></b></span></button>
+      <a class="header-contact" href="#contacto"><span class="header-contact-mark" aria-hidden="true"><svg class="header-contact-icon" viewBox="0 0 40 40" fill="none"><path class="project-frame" d="M10 13V9h12M31 19v12H10V18"/><path class="project-route" d="m17 23 12-12m-8 0h8v8"/><circle class="project-node" cx="10" cy="31" r="1.25"/></svg></span><span class="header-contact-copy"><small>¿TENÉS UN DESAFÍO?</small><b>Iniciar proyecto</b></span><i class="header-contact-arrow" aria-hidden="true">↗</i></a>
+      <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú"><i></i><i></i></button>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Índice del estudio" inert><p>TFS DEVELOPERS STUDIO <span>ÍNDICE / 07 DESTINOS</span></p><a href="#inicio"><span>00</span>Inicio <i>↗</i></a><a href="#estudio"><span>01</span>Estudio <i>↗</i></a><a href="#servicios"><span>02</span>Servicios <i>↗</i></a><a href="#proyectos"><span>03</span>Proyectos <i>↗</i></a><a href="#equipo"><span>04</span>Equipo <i>↗</i></a><a href="#metodo"><span>05</span>Proceso <i>↗</i></a><a href="#preguntas"><span>06</span>Preguntas frecuentes <i>↗</i></a><a href="#contacto"><span>07</span>Iniciar proyecto <i>↗</i></a><small>ROSARIO, AR <b>→</b> WORLDWIDE</small></nav>
+      <span class="header-scroll-line" aria-hidden="true"><i></i></span>
+    </header>
+    <dialog class="studio-index" id="studio-index" aria-labelledby="index-title">
+      <div class="index-dialog-head"><a class="index-dialog-brand" href="#inicio"><img src="/brand/tfs-mark.svg" alt=""><b>TFS DEVELOPERS STUDIO<small>STUDIO MAP / 07 DESTINOS</small></b></a><button class="index-close" type="button" aria-label="Cerrar índice">×</button></div>
+      <div class="index-dialog-layout"><nav class="index-chapters" aria-label="Capítulos del estudio">
+        <a href="#estudio" data-index="01" data-title="El estudio" data-note="La intención, el equipo y la forma en que abordamos problemas de producto."><span>01 / FUNDAMENTO</span><b>El estudio</b><i>↗</i></a>
+        <a href="#servicios" data-index="02" data-title="Capacidades" data-note="Ocho disciplinas que combinan producto, ingeniería y sistemas de negocio."><span>02 / CAPACIDADES</span><b>Qué podemos construir</b><i>↗</i></a>
+        <a href="#proyectos" data-index="03" data-title="Trabajo seleccionado" data-note="Proyectos reales, alcances documentados y una pieza en desarrollo."><span>03 / PROYECTOS</span><b>Ideas que tomaron forma</b><i>↗</i></a>
+        <a href="#equipo" data-index="04" data-title="El equipo" data-note="Tres integrantes. Perfiles preparados para completarse con información confirmada."><span>04 / PERSONAS</span><b>Quiénes lo hacemos</b><i>↗</i></a>
+        <a href="#metodo" data-index="05" data-title="Nuestro método" data-note="Del primer entendimiento a una solución lista para evolucionar."><span>05 / MÉTODO</span><b>Cómo avanzamos</b><i>↗</i></a>
+        <a href="#preguntas" data-index="06" data-title="Preguntas frecuentes" data-note="Respuestas breves para entender servicios, Odoo y el proceso de trabajo."><span>06 / RESPUESTAS</span><b>Antes de empezar</b><i>↗</i></a>
+        <a href="#contacto" data-index="07" data-title="Iniciar proyecto" data-note="Contanos qué te gustaría resolver y preparemos el siguiente paso."><span>07 / CONTACTO</span><b>Traé tu desafío</b><i>↗</i></a>
+      </nav><aside class="index-preview" aria-live="polite"><div class="index-preview-art"><span class="index-orbit index-orbit-a"></span><span class="index-orbit index-orbit-b"></span><img class="index-preview-logo" src="/brand/tfs-mark.svg" alt=""><small>DEV / 07</small></div><p id="index-preview-kicker">01 / FUNDAMENTO</p><h2 id="index-title">El estudio</h2><p id="index-preview-note">La intención, el equipo y la forma en que abordamos problemas de producto.</p><span class="index-preview-footer">ROSARIO <i>→</i> WORLDWIDE</span></aside></div>
+      <div class="index-dialog-bottom"><span>TFS DEVELOPERS STUDIO / ROSARIO</span><span>USÁ ESC PARA CERRAR</span></div>
+    </dialog>
+
+    <main id="main">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-topline"><span><i class="live-dot"></i> ESTUDIO DIGITAL INDEPENDIENTE</span><span>ROSARIO, AR <b>↗</b> WORLDWIDE</span></div>
+        <div class="hero-copy">
+          <p class="eyebrow reveal">IDEA <b>→</b> SISTEMA <b>→</b> PRODUCTO</p>
+          <h1 id="hero-title" class="hero-title"><span class="title-line">El código</span><span class="title-line title-shift">que mueve <em class="violet-gradient-title">ideas.</em></span></h1>
+          <div class="hero-bottom-copy"><p>Diseñamos y desarrollamos soluciones digitales para convertir desafíos reales en herramientas que funcionan.</p><a class="text-link" href="#proyectos">Explorar proyectos <span>↓</span></a></div>
+        </div>
+        <div class="hero-art" aria-label="Tarjeta animada de TFS Developers Studio">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+          <div class="core-shadow"></div>
+          <div class="core-assembly" tabindex="0" role="button" aria-label="Girar la tarjeta para ver el equipo" aria-pressed="false">
+            <div class="core-face face-front"><span class="cube-logo-motion" aria-hidden="true"><img class="cube-logo-mark" src="/brand/tfs-mark.svg" alt=""></span><small>DEVELOPERS STUDIO</small></div>
+            <div class="core-face face-back"><span class="cube-team-label">EL EQUIPO</span><div class="cube-team-names"><b>Tobías Coria</b><b>Felipe Basualdo</b><b>Santino Laferrara</b></div><small>TFS DEVELOPERS STUDIO</small></div>
+            <div class="core-face face-left"></div><div class="core-face face-right"></div><div class="core-face face-top"></div><div class="core-face face-bottom"></div>
+            <div class="core-light"></div>
+          </div>
+          <span class="art-coordinate coordinate-a">03° 14' 12.6" S</span><span class="art-coordinate coordinate-b">PRODUCT / INTERFACE / DATA</span>
+          <span class="art-index">01<span>—</span>07</span>
+        </div>
+        <a class="scroll-cue" href="#estudio"><span>DESCUBRÍ EL ESTUDIO</span><i></i></a>
+        <div class="hero-edge">TFS <span>—</span> BUILT TO MOVE FORWARD</div>
+      </section>
+
+      <section class="manifesto section-shell" id="estudio">
+        <div class="section-meta reveal"><span>01 / EL ESTUDIO</span><span>DEL DESAFÍO A LO TANGIBLE</span></div>
+        <div class="manifesto-layout">
+          <h2 class="display-heading reveal">Pensamos en <span class="silver-text">sistemas.</span><br>Construimos para <span class="orange-text">avanzar.</span></h2>
+          <div class="manifesto-aside reveal"><span class="aside-line"></span><p>TFS Developers Studio reúne a tres desarrolladores en torno a una misma pregunta: ¿cómo puede la tecnología hacer más simple y sólido el trabajo de las personas?</p><p>Trabajamos desde la comprensión del problema hasta el producto en uso, con atención al detalle técnico y a la experiencia cotidiana.</p><a href="#equipo" class="arrow-link">Conocé al equipo <span>↗</span></a></div>
+        </div>
+        <div class="manifesto-stats reveal"><div><span>01</span><p>Problemas reales<br><b>como punto de partida</b></p></div><div><span>02</span><p>Desarrollo conectado<br><b>de punta a punta</b></p></div><div><span>03</span><p>Una base clara<br><b>para seguir creciendo</b></p></div></div>
+      </section>
+
+      <section class="services section-shell" id="servicios">
+        <div class="section-meta reveal"><span>02 / CAPACIDADES</span><span>DISEÑO + INGENIERÍA</span></div>
+        <div class="services-heading"><h2 class="display-heading reveal">Una idea.<br><span class="silver-text">Muchas formas</span><br>de llevarla más lejos.</h2><p class="services-intro reveal">Soluciones pensadas según el problema, el contexto y la etapa de cada producto.</p></div>
+        <div class="service-explorer reveal">
+          <div class="service-list" role="tablist" aria-label="Servicios del estudio" aria-orientation="vertical">
+            <button class="service-item active" role="tab" id="service-tab-0" aria-selected="true" aria-controls="service-panel" data-service="0"><span>01</span><b>Desarrollo web</b><i>↗</i></button>
+            <button class="service-item" role="tab" id="service-tab-1" aria-selected="false" aria-controls="service-panel" data-service="1" tabindex="-1"><span>02</span><b>Software a medida</b><i>↗</i></button>
+            <button class="service-item" role="tab" id="service-tab-2" aria-selected="false" aria-controls="service-panel" data-service="2" tabindex="-1"><span>03</span><b>Automatización</b><i>↗</i></button>
+            <button class="service-item" role="tab" id="service-tab-3" aria-selected="false" aria-controls="service-panel" data-service="3" tabindex="-1"><span>04</span><b>ERP / Odoo</b><i>↗</i></button>
+            <button class="service-item" role="tab" id="service-tab-4" aria-selected="false" aria-controls="service-panel" data-service="4" tabindex="-1"><span>05</span><b>SaaS y plataformas</b><i>↗</i></button>
+            <button class="service-item" role="tab" id="service-tab-5" aria-selected="false" aria-controls="service-panel" data-service="5" tabindex="-1"><span>06</span><b>UI/UX y branding</b><i>↗</i></button>
+            <button class="service-item" role="tab" id="service-tab-6" aria-selected="false" aria-controls="service-panel" data-service="6" tabindex="-1"><span>07</span><b>Integraciones y APIs</b><i>↗</i></button>
+            <button class="service-item" role="tab" id="service-tab-7" aria-selected="false" aria-controls="service-panel" data-service="7" tabindex="-1"><span>08</span><b>Mantenimiento</b><i>↗</i></button>
+          </div>
+          <article class="service-panel" id="service-panel" role="tabpanel" aria-labelledby="service-tab-0" tabindex="0"><div class="service-panel-top"><span class="service-symbol">D<span>/</span>M</span><span class="panel-counter">01 <i>/</i> 08</span></div><p class="eyebrow">WEB DEVELOPMENT</p><h3>Experiencias digitales que hacen su trabajo más fácil.</h3><p class="service-description">Sitios corporativos, tiendas y aplicaciones web diseñadas para ofrecer una experiencia clara y una base técnica preparada para evolucionar.</p><div class="service-tags"><span>WEB</span><span>ECOMMERCE</span><span>APPS</span></div><a class="panel-next" href="#proyectos">Ver proyectos relacionados <span>↘</span></a></article>
+        </div>
+      </section>
+
+      <section class="projects section-shell" id="proyectos">
+        <div class="section-meta reveal"><span>03 / TRABAJO SELECCIONADO</span><span>CASOS REALES · ALCANCE DOCUMENTADO</span></div>
+        <div class="projects-heading"><h2 class="display-heading reveal">Ideas que ya<br><span class="silver-text project-gradient-title violet-gradient-title">tomaron forma.</span></h2><p class="reveal">Productos y sistemas desarrollados desde necesidades concretas. Cada caso muestra lo que está confirmado y deja claro qué sigue en construcción.</p></div>
+        <div class="project-showcase-grid" id="project-showcase-grid" aria-label="Proyectos seleccionados">
+          <article class="showcase-card sheen-card reveal" data-project="tcgym">
+            <div class="showcase-card-top"><span><i>01</i> / FULL-STACK / PRODUCTO WEB</span><span class="showcase-status"><i></i>CASO DOCUMENTADO</span></div>
+            <div class="showcase-media"><a class="showcase-media-link" aria-haspopup="dialog" aria-controls="project-detail-dialog" data-open-project="tcgym" aria-label="Explorar proyecto TCGym" href="https://tcgym.vercel.app/" target="_blank" rel="noopener noreferrer"><div class="showcase-browser"><div class="showcase-browser-bar"><span><i></i><i></i><i></i></span><b>TFS Developers Studio / FULL-STACK / PRODUCTO WEB</b><i>↗</i></div><img src="/media/tcgym-login.png" alt="Pantalla de acceso de TCGym con ingreso por email o documento" loading="lazy" decoding="async"></div><span class="showcase-launch" aria-hidden="true">↗</span></a><span class="showcase-corner">TFS / 01</span><span class="showcase-coordinate">PRODUCT / INTERFACE / DATA</span><div class="showcase-orbit" aria-hidden="true"></div></div>
+            <div class="showcase-copy"><div class="showcase-title-row"><div><p class="showcase-kicker">FULL-STACK / PRODUCTO WEB</p><h3 class="gradient-project-title">TCGym</h3></div><span class="showcase-title-mark" aria-hidden="true">TFS</span></div><p class="showcase-description">Gestión de gimnasio que conecta socios, reservas y administración en una sola aplicación.</p><div class="showcase-tags" aria-label="Tecnologías"><span>React</span><span>Node.js</span><span>Express</span><span>MySQL</span></div><div class="showcase-footer"><span>Frontend · Backend · Base de datos</span><div><a class="showcase-explore" href="https://tcgym.vercel.app/" target="_blank" rel="noopener noreferrer" aria-haspopup="dialog" aria-controls="project-detail-dialog" data-open-project="tcgym">Explorar TCGym <span>↗</span></a><a href="https://github.com/TobiasCoria/tcgym" target="_blank" rel="noopener noreferrer">CÓDIGO <span>↗</span></a></div></div></div>
+          </article>
+          <article class="showcase-card sheen-card reveal" data-project="pediatria">
+            <div class="showcase-card-top"><span><i>02</i> / PORTAL WEB / SISTEMA DE GESTIÓN</span><span class="showcase-status"><i></i>CASO DOCUMENTADO</span></div>
+            <div class="showcase-media"><a class="showcase-media-link" aria-haspopup="dialog" aria-controls="project-detail-dialog" data-open-project="pediatria" aria-label="Explorar proyecto Portal Pediatría" href="https://portal-de-historia-cl-nica-pedi-tri.vercel.app/login" target="_blank" rel="noopener noreferrer"><div class="showcase-browser"><div class="showcase-browser-bar"><span><i></i><i></i><i></i></span><b>TFS Developers Studio / PORTAL WEB / SISTEMA DE GESTIÓN</b><i>↗</i></div><img src="/media/pediatric-dashboard.png" alt="Panel del portal de gestión para consultorio pediátrico" loading="lazy" decoding="async"></div><span class="showcase-launch" aria-hidden="true">↗</span></a><span class="showcase-corner">TFS / 02</span><span class="showcase-coordinate">PRODUCT / INTERFACE / DATA</span><div class="showcase-orbit" aria-hidden="true"></div></div>
+            <div class="showcase-copy"><div class="showcase-title-row"><div><p class="showcase-kicker">PORTAL WEB / SISTEMA DE GESTIÓN</p><h3>Portal Pediatría</h3></div><span class="showcase-title-mark" aria-hidden="true">TFS</span></div><p class="showcase-description">Accesos diferenciados por perfil, agenda y gestión de pacientes para un consultorio.</p><div class="showcase-tags" aria-label="Alcance confirmado"><span>Frontend</span><span>Backend</span><span>Base de datos</span></div><div class="showcase-footer"><span>Frontend · Backend · Base de datos</span><div><a class="showcase-explore" href="https://portal-de-historia-cl-nica-pedi-tri.vercel.app/login" target="_blank" rel="noopener noreferrer" aria-haspopup="dialog" aria-controls="project-detail-dialog" data-open-project="pediatria">Explorar Portal Pediatría <span>↗</span></a></div></div></div>
+          </article>
+          <article class="showcase-card sheen-card reveal" data-project="facility">
+            <div class="showcase-card-top"><span><i>03</i> / ERP / OPERACIONES</span><span class="showcase-status"><i></i>CASO DOCUMENTADO</span></div>
+            <div class="showcase-media"><a class="showcase-media-link" aria-haspopup="dialog" aria-controls="project-detail-dialog" data-open-project="facility" aria-label="Explorar proyecto Facility Management" href="https://pl.nsnstudio.com/web/login?redirect=%2Fodoo%2Fapps%3F" target="_blank" rel="noopener noreferrer"><div class="showcase-browser"><div class="showcase-browser-bar"><span><i></i><i></i><i></i></span><b>TFS Developers Studio / ERP / OPERACIONES</b><i>↗</i></div><img src="/media/facility-public.png" alt="Pantalla pública de acceso al sistema Facility Management sobre Odoo" loading="lazy" decoding="async"></div><span class="showcase-launch" aria-hidden="true">↗</span></a><span class="showcase-corner">TFS / 03</span><span class="showcase-coordinate">PRODUCT / INTERFACE / DATA</span><div class="showcase-orbit" aria-hidden="true"></div></div>
+            <div class="showcase-copy"><div class="showcase-title-row"><div><p class="showcase-kicker">ERP / OPERACIONES</p><h3>Facility Management</h3></div><span class="showcase-title-mark" aria-hidden="true">TFS</span></div><p class="showcase-description">Desarrollo sobre Odoo que conecta análisis funcional con desarrollo. Solo se publica la pantalla de acceso público.</p><div class="showcase-tags" aria-label="Tecnologías"><span>Odoo</span></div><div class="showcase-footer"><span>Frontend · Backend · Base de datos</span><div><a class="showcase-explore" href="https://pl.nsnstudio.com/web/login?redirect=%2Fodoo%2Fapps%3F" target="_blank" rel="noopener noreferrer" aria-haspopup="dialog" aria-controls="project-detail-dialog" data-open-project="facility">Explorar Facility Management <span>↗</span></a></div></div></div>
+          </article>
+          <article class="showcase-card sheen-card reveal" data-project="izipark">
+            <div class="showcase-card-top"><span><i>04</i> / PRODUCTO DIGITAL</span><span class="showcase-status is-progress"><i></i>EN PROCESO</span></div>
+            <div class="showcase-media is-mobile-product"><a class="showcase-media-link showcase-media-static" aria-haspopup="dialog" aria-controls="project-detail-dialog" data-open-project="izipark" aria-label="Explorar proyecto Izipark" href="#contacto"><div class="showcase-phone"><span class="phone-island"></span><img src="/media/izipark-mobile.png" alt="Captura del proyecto Izipark en desarrollo" loading="lazy" decoding="async"><i class="phone-reflection"></i></div><span class="showcase-launch" aria-hidden="true">TFS</span></a><span class="showcase-corner">TFS / 04</span><span class="showcase-coordinate">BUILD / IN PROGRESS</span><div class="showcase-orbit" aria-hidden="true"></div></div>
+            <div class="showcase-copy"><div class="showcase-title-row"><div><p class="showcase-kicker">PRODUCTO DIGITAL</p><h3 class="gradient-project-title">Izipark</h3></div><span class="showcase-title-mark" aria-hidden="true">TFS</span></div><p class="showcase-description">Producto digital en desarrollo. Compartiremos más detalles cuando el equipo pueda presentarlos.</p><div class="showcase-tags" aria-label="Estado"><span>En desarrollo</span></div><div class="showcase-footer"><span>Proyecto en curso</span><div><a class="showcase-explore" href="#contacto" aria-haspopup="dialog" aria-controls="project-detail-dialog" data-open-project="izipark">Explorar Izipark <span>↗</span></a></div></div></div>
+          </article>
+        </div>
+        <p class="portfolio-note reveal"><span>+</span> Nuevos casos del equipo: preparados para incorporarse cuando confirmemos su alcance y materiales.</p>
+      </section>
+
+      <section class="team section-shell" id="equipo">
+        <div class="section-meta reveal"><span>04 / EL EQUIPO</span><span>TFS DEVELOPERS STUDIO</span></div>
+        <div class="team-heading"><h2 class="display-heading reveal">Tres miradas.<br><span class="silver-text violet-gradient-title">Un mismo impulso.</span></h2><p class="reveal">Tobías, Felipe y Santino formamos el equipo detrás de TFS Developers Studio. Sumamos nuestras perspectivas para abordar cada desafío.</p></div>
+        <div class="team-grid">
+          <article class="team-card reveal"><div class="team-portrait portrait-one"><span>TC</span><i class="portrait-orbit"></i><small>01 / ROSARIO, AR</small></div><div class="team-card-meta"><h3>Tobías Coria</h3><span>TFS DEVELOPERS STUDIO</span></div></article>
+          <article class="team-card reveal"><div class="team-portrait portrait-two"><span>FB</span><i class="portrait-orbit"></i><small>02 / TFS STUDIO</small></div><div class="team-card-meta"><h3>Felipe Basualdo</h3><span>TFS DEVELOPERS STUDIO</span></div></article>
+          <article class="team-card reveal"><div class="team-portrait portrait-three"><span>SL</span><i class="portrait-orbit"></i><small>03 / TFS STUDIO</small></div><div class="team-card-meta"><h3>Santino Laferrara</h3><span>TFS DEVELOPERS STUDIO</span></div></article>
+        </div>
+      </section>
+
+      <section class="method section-shell" id="metodo">
+        <div class="section-meta reveal"><span>05 / CÓMO AVANZAMOS</span><span>CLARIDAD EN CADA ETAPA</span></div>
+        <h2 class="display-heading reveal">Del primer <span class="orange-text">“¿y si…?”</span><br>a una solución en marcha.</h2>
+        <div class="method-line" aria-hidden="true"><span></span></div>
+        <div class="method-steps"><article class="reveal"><span>01</span><h3>Entender</h3><p>Conversamos sobre el contexto, los usuarios y el problema que conviene resolver primero.</p></article><article class="reveal"><span>02</span><h3>Definir</h3><p>Priorizamos el alcance y acordamos objetivos, entregables y criterios para avanzar.</p></article><article class="reveal"><span>03</span><h3>Construir</h3><p>Diseñamos, desarrollamos e integramos la solución con revisiones durante el proceso.</p></article><article class="reveal"><span>04</span><h3>Evolucionar</h3><p>Entregamos una base clara y definimos próximos pasos según el uso y nuevas necesidades.</p></article></div>
+      </section>
+
+      <section class="faq-section section-shell" id="preguntas" aria-labelledby="faq-title">
+        <div class="section-meta reveal"><span>06 / RESPUESTAS CLARAS</span><span>ANTES DE EMPEZAR</span></div>
+        <div class="faq-heading"><h2 class="display-heading reveal" id="faq-title">Preguntas que<br><span class="silver-text">aclaran el camino.</span></h2><p class="reveal">Si tu duda no aparece acá, escribinos y la conversamos.</p></div>
+        <div class="faq-layout"><div class="faq-index" aria-hidden="true"><span>FAQ</span><b>01—05</b><div class="faq-index-mark"><i></i><i></i><i></i></div><small>TFS / AYUDA</small></div>
+          <div class="faq-list">
+            <details class="faq-item sheen-card reveal" open><summary><span>01</span><b>¿Qué es Odoo?</b><i aria-hidden="true">+</i></summary><div class="faq-answer"><div class="faq-answer-inner"><p>ERP significa planificación de recursos empresariales: software que ayuda a coordinar procesos de un negocio. Odoo reúne aplicaciones conectadas para ventas, contabilidad, inventario, compras, CRM y otras áreas, compartiendo información dentro de una misma plataforma. Se pueden elegir los módulos necesarios y avanzar por etapas.</p><a href="https://www.odoo.com/" target="_blank" rel="noopener noreferrer">Conocer Odoo en su sitio oficial <span>↗</span></a></div></div></details>
+            <details class="faq-item sheen-card reveal"><summary><span>02</span><b>¿Necesito tener todo definido para consultar?</b><i aria-hidden="true">+</i></summary><div class="faq-answer"><div class="faq-answer-inner"><p>No. Podemos empezar por el problema, quién lo enfrenta y qué resultado sería útil. El alcance, las prioridades y una primera etapa se definen con esa información.</p></div></div></details>
+            <details class="faq-item sheen-card reveal"><summary><span>03</span><b>¿Cómo se estima el presupuesto?</b><i aria-hidden="true">+</i></summary><div class="faq-answer"><div class="faq-answer-inner"><p>Después de revisar necesidades, alcance, integraciones y prioridades, preparamos una propuesta con entregables y etapas. El importe se acuerda antes de comenzar; esta página no publica tarifas genéricas.</p></div></div></details>
+            <details class="faq-item sheen-card reveal"><summary><span>04</span><b>¿Pueden colaborar con un producto que ya existe?</b><i aria-hidden="true">+</i></summary><div class="faq-answer"><div class="faq-answer-inner"><p>Sí. Primero revisamos el contexto técnico, las tareas pendientes y la forma de trabajo del equipo para acordar un alcance de colaboración claro.</p></div></div></details>
+            <details class="faq-item sheen-card reveal"><summary><span>05</span><b>¿Qué pasa después de lanzar el proyecto?</b><i aria-hidden="true">+</i></summary><div class="faq-answer"><div class="faq-answer-inner"><p>El soporte, mantenimiento y evolución se conversan como parte de la propuesta o en una etapa posterior. La disponibilidad y los tiempos se acuerdan según cada proyecto.</p></div></div></details>
+          </div>
+        </div>
+        <a class="faq-contact-bridge reveal" href="#contacto"><span>EL SIGUIENTE PASO</span><b>¿Tu consulta es distinta?</b><strong>Hablemos <i aria-hidden="true">↘</i></strong></a>
+      </section>
+
+      <section class="contact-section section-shell" id="contacto">
+        <div class="contact-halo" aria-hidden="true"></div>
+        <div class="section-meta reveal"><span>07 / EL SIGUIENTE CAPÍTULO</span><span>TFS DEVELOPERS STUDIO · ROSARIO / WORLDWIDE</span></div>
+        <div class="contact-layout"><article class="contact-closer-card sheen-card reveal"><div class="closer-card-top"><span>INCOMING / PROJECT TRANSMISSION</span><span><i class="live-dot"></i> CANAL ABIERTO</span></div><div class="closer-emblem" aria-hidden="true"><span><img class="closer-emblem-logo" src="/brand/tfs-mark.svg" alt=""></span><i></i><b></b></div><p class="eyebrow">UNA IDEA PUEDE EMPEZAR ACÁ</p><h2 class="display-heading">Hagamos<br>que <span class="silver-text">avance.</span></h2><p class="closer-description">Un desafío real merece una conversación clara. Contanos qué querés construir y pensemos juntos el primer paso.</p><a class="contact-email" href="mailto:tobicoria09@gmail.com">tobicoria09@gmail.com <span>↗</span></a><div class="closer-card-bottom"><span>TFS DEVELOPERS STUDIO</span><span>ROSARIO <i>→</i> WORLDWIDE</span></div></article>
+          <form class="contact-form sheen-card reveal" id="contact-form"><div class="form-heading"><div><span>PROJECT INTAKE / 01</span><b>¿En qué te podemos ayudar?</b></div><i>● NUEVO CONTACTO</i></div><div class="form-progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div><p class="form-lead">Un poco de contexto nos ayuda a preparar mejor la conversación.</p><label for="name"><span><i>01</i>Tu nombre</span><input id="name" name="name" autocomplete="name" placeholder="¿Cómo te llamás?" maxlength="100" required></label><label for="email"><span><i>02</i>Email de contacto</span><input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@empresa.com" maxlength="200" required></label><div class="interest-field"><label class="interest-label" id="interest-label" for="interest-trigger"><span><i>03</i>¿Qué querés resolver?</span></label><select class="interest-native" id="interest" name="interest" required tabindex="-1" aria-hidden="true" aria-label="Qué querés resolver"><option value="" selected disabled>Elegí una opción</option><option value="Software a medida">Software a medida</option><option value="Desarrollo web">Desarrollo web</option><option value="ERP / Odoo">ERP / Odoo</option><option value="Automatización e integraciones">Automatización e integraciones</option><option value="Colaboración con el equipo">Colaboración con el equipo</option><option value="Otra consulta">Otra consulta</option></select><button class="interest-trigger" type="button" id="interest-trigger" role="combobox" aria-autocomplete="none" aria-labelledby="interest-label interest-current" aria-haspopup="listbox" aria-expanded="false" aria-controls="interest-options" aria-required="true" aria-describedby="interest-error"><span class="interest-value" id="interest-current">Elegí una opción</span><i aria-hidden="true"></i></button><div class="interest-options" id="interest-options" role="listbox" aria-label="Tipo de proyecto" aria-required="true" hidden></div><span class="interest-error" id="interest-error" role="status" aria-live="polite"></span></div><label for="message"><span><i>04</i>Contanos sobre el desafío</span><textarea id="message" name="message" rows="3" minlength="20" maxlength="2500" placeholder="¿Qué te gustaría construir o resolver?" required></textarea></label><p class="form-privacy">El formulario puede abrir un borrador de correo o copiar el mensaje para que lo envíes por el canal que prefieras. El sitio no almacena ni envía los datos.</p><button class="form-submit" type="submit"><span>Abrir borrador de correo</span><i aria-hidden="true">TFS</i><b>↗</b></button><button class="form-copy" id="copy-inquiry" type="button">Copiar consulta <span aria-hidden="true">▣</span></button><p class="form-status" role="status" aria-live="polite"></p></form></div>
+      </section>
+    </main>
+
+    <dialog class="project-detail-dialog" id="project-detail-dialog" aria-labelledby="project-detail-title">
+      <header class="project-detail-header">
+        <span class="project-detail-brand"><span class="brand-mark-motion" aria-hidden="true"><img class="brand-logo" src="/brand/tfs-mark.svg" alt=""></span><span class="project-detail-brand-copy"><span>TFS / CASO DE ESTUDIO</span><b id="project-detail-title">PROYECTO SELECCIONADO</b></span></span>
+        <button class="project-detail-back" type="button" aria-label="Volver a los proyectos">← <span>Volver</span></button>
+      </header>
+      <div class="project-detail-track" id="project-detail-track" tabindex="0" aria-label="Ficha continua del proyecto. Desplázate hacia la derecha para ver el trabajo realizado y las tecnologías.">
+        <p class="project-detail-empty">Seleccioná un proyecto para ver sus detalles.</p>
+      </div>
+    </dialog>
+    <footer class="site-footer"><a class="footer-brand" href="#inicio" aria-label="TFS Developers Studio, volver al inicio"><span class="brand-mark-motion" aria-hidden="true"><img class="brand-logo" src="/brand/tfs-mark.svg" alt=""></span><span class="footer-word">Developers Studio</span></a><p>Ideas complejas.<br><span>Tecnología en movimiento.</span></p><div class="footer-bottom"><span>© 2026 TFS DEVELOPERS STUDIO</span><span>SOFTWARE / PRODUCT / SYSTEMS</span><a href="#inicio">VOLVER ARRIBA ↑</a></div></footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+  <title id="title">TFS</title>
+  <desc id="desc">Símbolo geométrico plateado TFS con un acento violeta.</desc>
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2=".85" y2="1">
+      <stop stop-color="#fff"/>
+      <stop offset=".48" stop-color="#c9c7ce"/>
+      <stop offset="1" stop-color="#f2f0f4"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#a755ff"/>
+      <stop offset="1" stop-color="#5e17b8"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#silver)">
+    <path d="M42 26h296l-43 43H207v153l-64 59V69H0z" transform="translate(15 0)"/>
+    <path d="M357 26h298l-43 43H494v54h126l-42 42H494v57l-64 59V69h-116z"/>
+    <path d="M716 26h253l-43 43H743l-27 28 26 25h129q18 0 30 12l34 34q13 13 0 26l-44 45q-12 12-29 12H624l43-43h190l25-25-22-22H735q-18 0-31-13l-36-35q-12-12 0-25l44-47q15-15 34-15z"/>
+  </g>
+  <path fill="url(#violet)" d="m967 26 33 0-71 72h-34z"/>
+</svg>

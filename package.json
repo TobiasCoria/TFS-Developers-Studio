@@ -1,0 +1,19 @@
+{
+  "name": "tfs-developers-studio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 8780",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 8780"
+  },
+  "dependencies": {
+    "gsap": "3.13.0",
+    "lenis": "1.3.27"
+  },
+  "devDependencies": {
+    "vite": "8.3.7"
+  },
+  "engines": { "node": ">=22.12.0" }
+}
